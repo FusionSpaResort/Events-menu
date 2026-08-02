@@ -7,6 +7,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+  @media print {
+  /* Prevent sections, tables, and cards from splitting across pages */
+  section, .card, .tier-block, table, tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  /* Force each major section or page container onto a fresh page */
+  .page-container, section {
+    page-break-before: always;
+    break-before: page;
+  }
+
+  /* Clean up margins for printing */
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+  }
+}
   :root{
     --cream:#FBF6EF;
     --parchment:#F3E6D8;
