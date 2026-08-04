@@ -119,6 +119,33 @@
   .section-divider .line{flex:1; height:1px; background:var(--line);}
   .section-divider .label{font-family:'Jost',sans-serif; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--rosegold);}
 
+
+  /* ---------- SERVICE CHOICE PILLS ---------- */
+  .service-menu{margin-top:14px;}
+  .service-menu .sm-label{font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:8px; display:block;}
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .pill{font-family:'Cormorant Garamond',serif; font-size:14.5px; border:1px solid var(--rosegold); color:var(--ink); background:var(--white); padding:5px 14px; border-radius:20px;}
+  .pill.new{border-color:var(--burgundy); background:var(--parchment); color:var(--burgundy); font-weight:600; position:relative;}
+  .pill.new::after{content:"✦"; position:absolute; top:-8px; right:-4px; font-family:'Cinzel', serif; font-size:10px; color:var(--rosegold);}
+
+  /* ---------- CATEGORY BULLET ICONS ---------- */
+  .includes li.li-service::before{content:"✦";}
+  .includes li.li-dining::before{content:"◆"; font-size:10px;}
+  .includes li.li-amenity::before{content:"●"; font-size:8px;}
+
+  /* ---------- PERK BANNER (cabana upsell) ---------- */
+  .perk-banner{
+    margin-top:22px; padding:18px 26px;
+    background:linear-gradient(90deg, var(--burgundy) 0%, #7A3B45 100%);
+    color:var(--champagne); display:flex; align-items:center; gap:16px;
+    box-shadow:0 10px 26px rgba(58,24,32,0.18);
+  }
+  .perk-banner .pb-icon{font-family:'Cinzel',serif; font-size:20px; flex-shrink:0;}
+  .perk-banner .pb-text b{font-family:'Cinzel',serif; font-size:14.5px; letter-spacing:0.02em; display:block; margin-bottom:2px;}
+  .perk-banner .pb-text span{font-family:'Cormorant Garamond',serif; font-size:14px; opacity:0.9;}
+  .perk-note{font-family:'Jost',sans-serif; font-size:11.5px; letter-spacing:0.04em; color:var(--rosegold); font-style:normal; margin-top:12px; text-transform:uppercase;}
+  .perk-note::before{content:"✦ "; }
+
   @media print{
     .toolbar{display:none;}
     html,body{background:white;}
@@ -133,7 +160,6 @@
     .cover h1{font-size:28px;}
   }
 </style>
-</head>
 <body>
 
 <div class="toolbar">
@@ -171,7 +197,7 @@
       </tbody>
     </table>
 
-    <h3 class="box-h" style="color:var(--burgundy); margin-bottom:6px;">Standard Rates &amp; Bundled Service Formula</h3>
+    <h3 class="box-h" style="margin-bottom:6px;">Standard Rates &amp; Bundled Service Formula</h3>
     <table class="ref-table">
       <thead><tr><th>Access Type</th><th>Rate</th><th>Notes</th></tr></thead>
       <tbody>
@@ -181,7 +207,7 @@
         <tr><td>Moonlight Access (M–F, from 7:30 PM)</td><td class="price">$59.40</td><td>Women only</td></tr>
       </tbody>
     </table>
-    <div class="callout"><b>Bundled Service Formula:</b> Massage/Facial Price + $50 (a reduced, bundled admission) = Service Package Price. <em>Example — Glow &amp; Go Facial ($165) + $50 = $215 total.</em></div>
+    <div class="callout"><b>À La Carte Service Formula:</b> Massage/Facial Price + $50 (a reduced, bundled admission) = Service Package Price — for guests booking outside of a tier package. <em>Example — Glow &amp; Go Facial ($165) + $50 = $215 total.</em></div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">02</span><span>Contents</span></div>
   </div>
 
@@ -190,14 +216,14 @@
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow">The Heart Of The Book</div><div class="eyebrow">Luxury Redefined</div></div>
     <h2 class="page-title">Five Tiers, One Simple Idea</h2>
-    <p class="page-intro">The further you climb, the more we build in — and the better the value gets. Suited to solo guests, pairs, and groups up to eight.</p>
+    <p class="page-intro">Each tier is crafted as a natural elevation — richer choice, deeper indulgence, and a more complete experience the higher you rise. Suited to solo guests, pairs, and groups up to eight.</p>
 
     <div class="ladder" style="margin-top:26px;">
-      <div class="tier-chip" data-t="1"><div class="b">I</div><div class="n">Essential Access</div><div class="p">$86</div></div>
-      <div class="tier-chip" data-t="2"><div class="b">II</div><div class="n">Relax &amp; Refuel</div><div class="p">$105</div></div>
-      <div class="tier-chip" data-t="3"><div class="b">III</div><div class="n">Full Fusion</div><div class="p">$235</div></div>
-      <div class="tier-chip" data-t="4"><div class="b">IV</div><div class="n">Complete Renewal</div><div class="p">$325</div></div>
-      <div class="tier-chip" data-t="5"><div class="b">V</div><div class="n">Ultimate Fusion</div><div class="p">$350</div></div>
+      <div class="tier-chip" data-t="1"><div class="b">I</div><div class="n">Essential Access</div><div class="p">$86.40</div></div>
+      <div class="tier-chip" data-t="2"><div class="b">II</div><div class="n">Relax &amp; Refuel</div><div class="p">$96</div></div>
+      <div class="tier-chip" data-t="3"><div class="b">III</div><div class="n">Full Fusion</div><div class="p">$280</div></div>
+      <div class="tier-chip" data-t="4"><div class="b">IV</div><div class="n">Complete Renewal</div><div class="p">$320</div></div>
+      <div class="tier-chip" data-t="5"><div class="b">V</div><div class="n">Ultimate Fusion</div><div class="p">$460</div></div>
     </div>
 
     <div class="chart-card">
@@ -205,20 +231,20 @@
       <svg viewBox="0 0 700 160" width="100%">
         <line x1="50" y1="130" x2="660" y2="130" stroke="#E3CFC2" stroke-width="1"/>
         <g font-family="Jost, sans-serif">
-          <rect x="80" y="115" width="80" height="15" fill="#E9CFC7"/>
-          <text x="120" y="108" text-anchor="middle" font-size="11" fill="#4A2B30">$86</text>
+          <rect x="80" y="121" width="80" height="9" fill="#E9CFC7"/>
+          <text x="120" y="114" text-anchor="middle" font-size="11" fill="#4A2B30">$86</text>
           <text x="120" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER I</text>
-          <rect x="200" y="105" width="80" height="25" fill="#DDB3AA"/>
-          <text x="240" y="98" text-anchor="middle" font-size="11" fill="#4A2B30">$105</text>
+          <rect x="200" y="119" width="80" height="11" fill="#DDB3AA"/>
+          <text x="240" y="112" text-anchor="middle" font-size="11" fill="#4A2B30">$96</text>
           <text x="240" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER II</text>
-          <rect x="320" y="63" width="80" height="67" fill="#CE968C"/>
-          <text x="360" y="56" text-anchor="middle" font-size="11" fill="#4A2B30">$235</text>
+          <rect x="320" y="79" width="80" height="51" fill="#CE968C"/>
+          <text x="360" y="72" text-anchor="middle" font-size="11" fill="#4A2B30">$280</text>
           <text x="360" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER III</text>
-          <rect x="440" y="37" width="80" height="93" fill="#BC7B72"/>
-          <text x="480" y="30" text-anchor="middle" font-size="11" fill="#4A2B30">$325</text>
+          <rect x="440" y="71" width="80" height="59" fill="#BC7B72"/>
+          <text x="480" y="64" text-anchor="middle" font-size="11" fill="#4A2B30">$320</text>
           <text x="480" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER IV</text>
-          <rect x="560" y="27" width="80" height="103" fill="#5C2733"/>
-          <text x="600" y="20" text-anchor="middle" font-size="11" fill="#4A2B30" font-weight="600">$350</text>
+          <rect x="560" y="30" width="80" height="100" fill="#5C2733"/>
+          <text x="600" y="23" text-anchor="middle" font-size="11" fill="#4A2B30" font-weight="600">$460</text>
           <text x="600" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER V</text>
         </g>
       </svg>
@@ -227,12 +253,17 @@
     <table class="ref-table" style="margin-top:16px;">
       <thead><tr><th></th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th></tr></thead>
       <tbody>
-        <tr><td>Guest Min.</td><td>2</td><td>2</td><td>2</td><td>2</td><td>4 (max 8)</td></tr>
-        <tr><td>Dining</td><td>—</td><td>Bev+App</td><td>+Entrée</td><td>+Entrée</td><td>Full Course</td></tr>
-        <tr><td>Service</td><td>—</td><td>—</td><td>Facial</td><td>Body+Facial</td><td>1 choice, free upgrade</td></tr>
-        <tr><td>Cabana</td><td>—</td><td>—</td><td>—</td><td>—</td><td>Included</td></tr>
+        <tr><td>Guest Min.</td><td>8</td><td>8</td><td>6</td><td>6</td><td>4 (max 8)</td></tr>
+        <tr><td>Dining</td><td>—</td><td>$10 Credit</td><td>$25 Credit</td><td>$50 Credit</td><td>$90 Credit</td></tr>
+        <tr><td>Service Choices</td><td>—</td><td>—</td><td>4 options</td><td>10 options</td><td>13 options</td></tr>
+        <tr><td>Enhancements</td><td>—</td><td>—</td><td>—</td><td>1 included</td><td>2 included</td></tr>
       </tbody>
     </table>
+
+    <div class="perk-banner">
+      <div class="pb-icon">✦</div>
+      <div class="pb-text"><b>A Privilege at Every Tier: Private Cabana Pricing</b><span>Add a Private Cabana to any tier for just $100 per group — a savings of $89 off the regular $189 rate.</span></div>
+    </div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">03</span><span>Package Tiers</span></div>
   </div>
 
@@ -248,25 +279,24 @@
         <div class="ob-price"><div class="big">$86.40</div><div class="sub">per guest</div></div>
       </div>
       <div class="ob-body">
-        <ul class="includes single"><li>Standard facility admission</li></ul>
-        <div class="ob-value">Weekend rate $102.60 · Guest minimum: 2</div>
-        <p class="upgrade-note">Best for guests who simply want the facility — pool, sauna, amenities — with no dining or service attached.</p>
+        <ul class="includes single"><li class="li-amenity">Standard facility admission</li></ul>
+        <div class="ob-value">Weekend rate $102.60 · Guest minimum: 8</div>
+        <p class="upgrade-note">Best for guests who simply want the facility — pool, sauna, amenities — with no dining credit or service attached.</p>
       </div>
     </div>
 
     <div class="offer-box">
       <div class="ob-head">
         <div><div class="ob-eyebrow">Tier II</div><div class="ob-title">Relax &amp; Refuel</div></div>
-        <div class="ob-price"><div class="big">$105</div><div class="sub">per guest</div></div>
+        <div class="ob-price"><div class="big">$96</div><div class="sub">per guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
-          <li>Standard admission</li>
-          <li>2 signature beverages</li>
-          <li>1 appetizer</li>
-          <li>Guest minimum: 2</li>
+          <li class="li-amenity">Standard admission</li>
+          <li class="li-dining">$10 Food Credit per guest</li>
         </ul>
-        <div class="ob-value"><span class="strike">$120.40 value</span> — <span class="save">Save $15 · 13% off</span></div>
+        <div class="ob-value"><span class="strike">$112.60 separately</span> — <span class="save">Save $16.60 · ~15% off</span></div>
+        <p class="upgrade-note">Guest minimum: 8. A simple, flat-rate day pass with a food credit built in — no weekend surcharge, no line-item math.</p>
       </div>
     </div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">04</span><span>Package Tiers</span></div>
@@ -281,41 +311,55 @@
     <div class="offer-box">
       <div class="ob-head">
         <div><div class="ob-eyebrow">Tier III</div><div class="ob-title">Full Fusion</div></div>
-        <div class="ob-price"><div class="big">$235</div><div class="sub">per guest</div></div>
+        <div class="ob-price"><div class="big">$280</div><div class="sub">per guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
-          <li>Bundled admission</li>
-          <li>Glow &amp; Go Facial, included</li>
-          <li>2 beverages + appetizer</li>
-          <li>1 entrée</li>
+          <li class="li-amenity">Bundled admission</li>
+          <li class="li-dining">$25 Dining Credit per guest</li>
         </ul>
-        <div class="ob-value"><span class="strike">$280 value</span> — <span class="save">Save $45 · 16% off</span></div>
-        <div class="bonus-strip">
-          <b>Prefer a different service?</b> The $165 credit applies toward any massage or facial — pay only the difference:
-          <div class="badge-row">
-            <span class="badge">Glass Skin +$10</span><span class="badge">Men's Facial +$20</span><span class="badge">Fusion &amp; Beyond +$30</span>
-            <span class="badge">Artisan/Cleopatra +$15</span><span class="badge">Relaxation +$25</span><span class="badge">Deep Pressure +$40</span>
-            <span class="badge">Therapeutic +$50</span><span class="badge">Prenatal +$85</span>
+        <div class="service-menu">
+          <span class="sm-label">Choice of One Service</span>
+          <div class="pill-row">
+            <span class="pill">Glow &amp; Go Facial</span>
+            <span class="pill">Relaxation Massage</span>
+            <span class="pill">Artisan Soap Ritual</span>
+            <span class="pill">Cleopatra Milk Escape</span>
           </div>
         </div>
+        <div class="ob-value" style="margin-top:14px;"><span class="strike">$317.60 separately</span> — <span class="save">Save $37.60 · ~12% off</span></div>
+        <p class="upgrade-note">Guest minimum: 6. Our most balanced offering — a genuine spa treatment paired with real dining credit, at a meaningful discount.</p>
       </div>
     </div>
 
     <div class="offer-box">
       <div class="ob-head">
         <div><div class="ob-eyebrow">Tier IV</div><div class="ob-title">Complete Renewal</div></div>
-        <div class="ob-price"><div class="big">$325</div><div class="sub">per guest</div></div>
+        <div class="ob-price"><div class="big">$320</div><div class="sub">per guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
-          <li>Bundled admission</li>
-          <li>Choice of Body Treatment: Artisan Soap Ritual, Cleopatra Milk Escape, or Relaxation Massage</li>
-          <li>Glow &amp; Go Facial, included (upgradeable)</li>
-          <li>2 beverages + appetizer + entrée</li>
+          <li class="li-amenity">Bundled admission</li>
+          <li class="li-dining">$50 Dining Credit per guest</li>
+          <li class="li-service">1 Service Add-On / Enhancement included</li>
         </ul>
-        <div class="ob-value"><span class="strike">~$465 value</span> — <span class="save">Save ~$140 · 29% off</span></div>
-        <p class="upgrade-note">Two services, one visit — our most-booked tier. Guest minimum: 2.</p>
+        <div class="service-menu">
+          <span class="sm-label">A Refined Selection — Choose From 10 Services at Tier IV</span>
+          <div class="pill-row">
+            <span class="pill">Glow &amp; Go Facial</span>
+            <span class="pill">Relaxation Massage</span>
+            <span class="pill">Artisan Soap Ritual</span>
+            <span class="pill">Cleopatra Milk Escape</span>
+            <span class="pill new">Deep Pressure Release</span>
+            <span class="pill new">Silken Sugar Veil</span>
+            <span class="pill new">Black Pearl Detox Polish</span>
+            <span class="pill new">Café Radiance</span>
+            <span class="pill new">Ocean Mineral Polish Scrub</span>
+            <span class="pill new">Glass Skin Ritual</span>
+          </div>
+        </div>
+        <div class="ob-value" style="margin-top:14px;"><span class="strike">$402.60 separately</span> — <span class="save">Save $82.60 · ~21% off</span></div>
+        <p class="upgrade-note">Guest minimum: 6. Everything Tier III offers, taken further — a richer collection of services and a complimentary enhancement — our most-loved indulgence.</p>
       </div>
     </div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">05</span><span>Package Tiers</span></div>
@@ -330,21 +374,38 @@
     <div class="offer-box premium" style="margin-top:16px;">
       <div class="ob-head">
         <div><div class="ob-eyebrow">Tier V · Flagship</div><div class="ob-title">The Ultimate Fusion</div></div>
-        <div class="ob-price"><div class="big">$350</div><div class="sub">per guest</div></div>
+        <div class="ob-price"><div class="big">$460</div><div class="sub">per guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
-          <li>Bundled admission, upgraded to All-Day Access</li>
-          <li><b>ONE</b> service of your choice — Facial, Body Scrub, or Massage — with a free premium upgrade</li>
-          <li>Full-course dining: beverages, appetizer, entrée, dessert</li>
-          <li>Private cabana, reserved for your group</li>
+          <li class="li-amenity">Bundled admission, upgraded to All-Day Access</li>
+          <li class="li-dining">$90 Dining Credit per guest</li>
+          <li class="li-service">2 Service Add-Ons / Enhancements included</li>
         </ul>
-        <div class="ob-value"><span class="strike">$504 value</span> — <span class="save">Save $154 · 31% off</span></div>
-        <div class="bonus-strip">
-          <b>Included luxury bonuses</b>
-          All-Day Access · Free upgrade to any Specialty Massage, Fusion &amp; Beyond, or Men's Facial · One Premium Add-On per guest (Essential Oil, Salt Stone, CBD, Hot Stones, Hot Towel, or Cupping) · Priority cabana seating · Optional champagne toast add-on
+        <div class="service-menu">
+          <span class="sm-label">Our Complete Collection — Choose From 13 Services at Tier V</span>
+          <div class="pill-row">
+            <span class="pill">Glow &amp; Go Facial</span>
+            <span class="pill">Relaxation Massage</span>
+            <span class="pill">Artisan Soap Ritual</span>
+            <span class="pill">Cleopatra Milk Escape</span>
+            <span class="pill">Deep Pressure Release</span>
+            <span class="pill">Silken Sugar Veil</span>
+            <span class="pill">Black Pearl Detox Polish</span>
+            <span class="pill">Café Radiance</span>
+            <span class="pill">Ocean Mineral Polish Scrub</span>
+            <span class="pill">Glass Skin Ritual</span>
+            <span class="pill new">Fusion &amp; Beyond Facial</span>
+            <span class="pill new">Therapeutic Restoration</span>
+            <span class="pill new">Prenatal Massage</span>
+          </div>
         </div>
-        <p class="upgrade-note">Guest minimum 4, maximum 8 (private cabana capacity). Want a second service? Add any Tier I–IV service à la carte. Our flagship experience for birthdays, bachelorette/bachelor parties, and anniversaries.</p>
+        <div class="ob-value" style="margin-top:14px;"><span class="strike">$607.60 separately</span> — <span class="save">Save $147.60 · ~24% off</span></div>
+        <p class="upgrade-note">Guest count: 4–8 (private group size). Our complete experience — every service on the menu is on the table, plus two enhancements and a full day to enjoy it.</p>
+        <div class="perk-banner" style="margin-top:18px;">
+          <div class="pb-icon">✦</div>
+          <div class="pb-text"><b>Add the Private Cabana</b><span>Just $100 for your group — the perfect finishing touch for the Ultimate Fusion.</span></div>
+        </div>
       </div>
     </div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">06</span><span>Flagship Package</span></div>
@@ -355,7 +416,7 @@
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow">One Rule, Every Package</div><div class="eyebrow">Luxury Redefined</div></div>
     <h2 class="page-title">Group Size Discount Schedule</h2>
-    <p class="page-intro">A single, transparent schedule applies across every tier and every package in this book.</p>
+    <p class="page-intro">A single, transparent schedule applies across every tier and every package in this book — beyond each tier's own guest minimum.</p>
 
     <table class="ref-table" style="margin-top:14px;">
       <thead><tr><th>Guest Count</th><th>Discount</th><th>Applies To</th></tr></thead>
@@ -391,7 +452,7 @@
         </g>
       </svg>
     </div>
-    <div class="callout">This schedule applies on top of each tier's already-discounted price, never stacks with another promotion, and holds the line so pricing stays honest and predictable at every size.</div>
+    <div class="callout">This schedule applies on top of each tier's already-fair package price, never stacks with another promotion, and holds the line so pricing stays honest and predictable at every size.</div>
     <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">07</span><span>Group Discounts</span></div>
   </div>
 
@@ -402,18 +463,16 @@
     <h2 class="page-title">Large Groups · Corporate · Private Rental</h2>
 
     <div class="offer-box">
-      <div class="ob-head"><div><div class="ob-eyebrow">9+ Guests</div><div class="ob-title">Large Group Packages</div></div></div>
+      <div class="ob-head"><div><div class="ob-eyebrow">15+ Guests</div><div class="ob-title">Large Group Packages</div></div></div>
       <div class="ob-body">
         <table class="ref-table">
-          <thead><tr><th>Guests</th><th>Admission</th><th>+ Dining</th></tr></thead>
+          <thead><tr><th>Guests</th><th>Admission</th><th>+ $10 Food Credit</th></tr></thead>
           <tbody>
-            <tr><td>9–10</td><td class="price">$82.08</td><td class="price">$99.75</td></tr>
-            <tr><td>11–15</td><td class="price">$77.76</td><td class="price">$94.50</td></tr>
-            <tr><td>16–20</td><td class="price">$73.44</td><td class="price">$89.25</td></tr>
-            <tr><td>21+</td><td class="price">Custom</td><td class="price">Custom</td></tr>
+            <tr><td>15–20</td><td class="price">$73.44</td><td class="price">$81.60</td></tr>
+            <tr><td>21+</td><td class="price">Custom Quote</td><td class="price">Custom Quote</td></tr>
           </tbody>
         </table>
-        <p class="upgrade-note">Optional Spa Enhancement Block available, subject to daily capacity and off-peak scheduling.</p>
+        <p class="upgrade-note">Most large events are individually quoted based on date, season, and the specific experience you're planning — the rate above is a starting reference only. Groups of 9–14 guests fall between our tier packages and Large Group pricing; contact our events team and we'll tailor a custom rate. An optional Spa Enhancement Block is also available, subject to daily capacity and off-peak scheduling.</p>
       </div>
     </div>
 
@@ -422,9 +481,9 @@
         <div class="ob-head"><div><div class="ob-eyebrow">Offsites &amp; Team Days</div><div class="ob-title">Corporate Events</div></div></div>
         <div class="ob-body">
           <ul class="includes single">
-            <li>Large Group or Tier I–V rates (by size)</li>
-            <li>Optional Spa Enhancement Block</li>
-            <li>Off-peak: weekdays, 10–11 AM, after 4–5 PM</li>
+            <li class="li-amenity">Large Group or Tier I–V rates (by size)</li>
+            <li class="li-service">Optional Spa Enhancement Block</li>
+            <li class="li-amenity">Off-peak: weekdays, 10–11 AM, after 4–5 PM</li>
           </ul>
           <p class="upgrade-note">Lead time: 4–8 weeks</p>
         </div>
@@ -433,9 +492,9 @@
         <div class="ob-head"><div><div class="ob-eyebrow">Weddings &amp; Takeovers</div><div class="ob-title">Full Facility Rental</div></div></div>
         <div class="ob-body">
           <ul class="includes single">
-            <li>Private, exclusive facility access</li>
-            <li>Base rate: custom quote</li>
-            <li>Add Tier II–V dining or wellness block</li>
+            <li class="li-amenity">Private, exclusive facility access</li>
+            <li class="li-dining">Base rate: custom quote</li>
+            <li class="li-service">Add Tier II–V dining credit or wellness block</li>
           </ul>
           <p class="upgrade-note">Lead time: 6–12 weeks</p>
         </div>
@@ -478,10 +537,11 @@
             <tr><td>Hot Stones</td><td class="price">$25</td></tr>
             <tr><td>Hot Towel Relaxation</td><td class="price">$30</td></tr>
             <tr><td>Cupping Therapy</td><td class="price">$40</td></tr>
-            <tr><td>Private Cabana Rental (4–8 guests)</td><td class="price">$189</td></tr>
-            <tr><td>Set Dining (2 bev + app + entrée)</td><td class="price">~$65</td></tr>
+            <tr><td>Private Cabana — with any tier</td><td class="price">$100</td></tr>
+            <tr><td>Private Cabana — standalone</td><td class="price">$189</td></tr>
           </tbody>
         </table>
+        <p class="upgrade-note" style="margin-top:12px;">Full dining menu at fusionsparesort.com/dining · dining credits apply toward any menu item</p>
       </div>
     </div>
 
