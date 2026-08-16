@@ -243,6 +243,271 @@
   .ref-table th:last-child,.ref-table td:last-child{border-right:none;}
 
 
+
+  /* ---------- FIND YOUR FIT QUICK GUIDE ---------- */
+  .fit-guide{margin-top:22px; border:1px solid var(--line); background:var(--white);}
+  .fit-row{display:flex; align-items:center; padding:12px 18px; border-bottom:1px solid var(--line); gap:16px;}
+  .fit-row:last-child{border-bottom:none;}
+  .fit-row .fg-size{font-family:'Jost',sans-serif; font-weight:600; font-size:14px; color:var(--burgundy); width:110px; flex-shrink:0;}
+  .fit-row .fg-tiers{font-size:16px; color:var(--ink);}
+
+  /* ---------- CTA BUTTONS (mailto / tel / links) ---------- */
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap; margin-top:18px;}
+  .cta-btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Jost',sans-serif; font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
+    padding:12px 24px; text-decoration:none;
+    border:1px solid var(--burgundy); color:var(--burgundy); background:transparent;
+    transition:background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease;
+  }
+  .cta-btn:hover{background:var(--burgundy); color:var(--champagne); transform:translateY(-2px); box-shadow:0 10px 22px rgba(58,24,32,0.2);}
+  .cta-btn.solid{background:var(--burgundy); color:var(--champagne);}
+  .cta-btn.solid:hover{background:var(--burgundy-dark);}
+  .cta-btn.on-dark{border-color:var(--champagne); color:var(--champagne);}
+  .cta-btn.on-dark:hover{background:var(--champagne); color:var(--burgundy-dark);}
+
+  /* ---------- ENHANCEMENT CROSS-LINK ---------- */
+  .jump-link{
+    display:inline-block; margin-top:10px; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:0.06em;
+    text-transform:uppercase; color:var(--rosegold); text-decoration:none; border-bottom:1px solid var(--rosegold);
+    padding-bottom:2px; transition:color .3s ease, border-color .3s ease;
+  }
+  .jump-link:hover{color:var(--burgundy); border-color:var(--burgundy);}
+
+  /* ---------- EXTERNAL LINK CARDS (with icon graphics) ---------- */
+  .link-grid{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-top:20px;}
+  .link-card{
+    display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px;
+    text-decoration:none; background:var(--white); border:1px solid var(--line);
+    padding:22px 14px; transition:transform .4s cubic-bezier(.22,.61,.36,1), border-color .3s ease, box-shadow .4s ease;
+  }
+  .link-card:hover{transform:translateY(-6px); border-color:var(--rosegold); box-shadow:0 16px 30px rgba(58,24,32,0.14);}
+  .link-card .lc-icon{
+    width:52px; height:52px; border-radius:50%; background:var(--parchment);
+    display:flex; align-items:center; justify-content:center; color:var(--burgundy);
+    transition:background .3s ease, color .3s ease;
+  }
+  .link-card:hover .lc-icon{background:var(--burgundy); color:var(--champagne);}
+  .link-card .lc-icon svg{width:24px; height:24px;}
+  .link-card .lc-label{font-family:'Cinzel',serif; font-size:13.5px; color:var(--burgundy); letter-spacing:0.02em;}
+  .link-card .lc-sub{font-family:'Jost',sans-serif; font-size:10.5px; color:var(--ink-soft); letter-spacing:0.03em;}
+  .link-card.wide{grid-column:span 1;}
+
+  /* ---------- FAQ ACCORDION ---------- */
+  .faq-group{margin-top:24px;}
+  .faq-group-title{font-family:'Jost',sans-serif; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--rosegold); margin-bottom:8px; margin-top:20px;}
+  details.faq-item{border-bottom:1px solid var(--line); padding:4px 0;}
+  details.faq-item summary{
+    list-style:none; cursor:pointer; display:flex; justify-content:space-between; align-items:center;
+    padding:12px 4px; font-family:'Cormorant Garamond',serif; font-size:16.5px; color:var(--ink); font-weight:600;
+  }
+  details.faq-item summary::-webkit-details-marker{display:none;}
+  details.faq-item summary .faq-icon{
+    font-family:'Jost',sans-serif; font-size:16px; color:var(--rosegold); flex-shrink:0; margin-left:14px;
+    transition:transform .35s ease;
+  }
+  details.faq-item[open] summary .faq-icon{transform:rotate(135deg); color:var(--burgundy);}
+  details.faq-item .faq-body{padding:0 4px 14px; font-size:15px; color:var(--ink-soft); line-height:1.55;}
+  details.faq-item .faq-body a{color:var(--burgundy);}
+
+  /* ---------- SAVINGS EMPHASIS ---------- */
+  .ob-value .save{font-style:italic;}
+
+  /* ---------- NEXT STEPS ---------- */
+  .next-steps{margin-top:20px; display:flex; flex-direction:column; gap:12px;}
+  .next-step{display:flex; gap:14px; align-items:flex-start; padding:14px 18px; background:var(--white); border-left:3px solid var(--rosegold);}
+  .next-step .ns-audience{font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--rosegold); flex-shrink:0; width:150px;}
+  .next-step p{margin:0; font-size:14.5px; color:var(--ink); line-height:1.5;}
+  .next-step p a{color:var(--burgundy); font-weight:600; text-decoration:none; border-bottom:1px solid var(--rosegold);}
+
+
+  /* ---------- QUICK-LINK IMAGE CARDS ---------- */
+  .link-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:20px;}
+  .link-card{
+    display:block; text-decoration:none; background:var(--white); border:1px solid var(--line);
+    overflow:hidden; transition:transform .4s cubic-bezier(.22,.61,.36,1), box-shadow .4s ease, border-color .4s ease;
+    break-inside:avoid;
+  }
+  .link-card:hover{transform:translateY(-6px); box-shadow:0 20px 34px rgba(58,24,32,0.2); border-color:var(--rosegold);}
+  .link-card .lc-img{width:100%; height:78px; object-fit:cover; display:block; filter:saturate(0.92);}
+  .link-card .lc-label{
+    padding:9px 8px; text-align:center; font-family:'Jost',sans-serif; font-size:10.5px;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--burgundy); font-weight:500;
+  }
+  .link-card .lc-sub{display:block; font-family:'Cormorant Garamond',serif; text-transform:none; letter-spacing:0; font-size:11px; color:var(--ink-soft); font-style:italic; margin-top:2px;}
+
+  /* ---------- FIND YOUR FIT GUIDE ---------- */
+  .fit-guide{margin-top:22px; border:1px solid var(--line); background:var(--white);}
+  .fit-row{display:flex; align-items:center; gap:16px; padding:13px 18px; border-bottom:1px solid var(--line);}
+  .fit-row:last-child{border-bottom:none;}
+  .fit-row .fg-size{
+    font-family:'Jost',sans-serif; font-weight:600; font-size:13px; color:var(--champagne);
+    background:var(--burgundy); padding:7px 14px; white-space:nowrap; min-width:96px; text-align:center;
+  }
+  .fit-row .fg-rec{font-size:16px; color:var(--ink);}
+  .fit-row .fg-rec b{color:var(--burgundy);}
+
+  /* ---------- FAQ ACCORDION ---------- */
+  .faq-group{margin-top:18px;}
+  .faq-group h4{font-family:'Cinzel',serif; font-size:14px; color:var(--burgundy); margin-bottom:8px; letter-spacing:0.03em;}
+  details.faq-item{
+    border-bottom:1px solid var(--line); padding:4px 0;
+  }
+  details.faq-item summary{
+    list-style:none; cursor:pointer; padding:11px 4px;
+    display:flex; justify-content:space-between; align-items:center; gap:12px;
+    font-family:'Cormorant Garamond',serif; font-size:15.5px; color:var(--ink); font-weight:600;
+  }
+  details.faq-item summary::-webkit-details-marker{display:none;}
+  details.faq-item summary::after{
+    content:"+"; font-family:'Jost',sans-serif; font-size:16px; color:var(--rosegold);
+    border:1px solid var(--rosegold); width:22px; height:22px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    transition:transform .35s cubic-bezier(.22,.61,.36,1), background .35s ease, color .35s ease;
+  }
+  details.faq-item[open] summary::after{transform:rotate(135deg); background:var(--burgundy); color:var(--champagne); border-color:var(--burgundy);}
+  details.faq-item .faq-a{
+    padding:0 4px 14px 4px; font-size:14.5px; color:var(--ink-soft); line-height:1.6;
+  }
+  details.faq-item .faq-a a{color:var(--burgundy); text-decoration:underline;}
+
+  /* ---------- CTA BUTTONS ---------- */
+  .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+  .cta-btn{
+    font-family:'Jost',sans-serif; font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;
+    text-decoration:none; padding:12px 22px; border:1px solid var(--burgundy); color:var(--burgundy);
+    background:transparent; transition:background .35s ease, color .35s ease, transform .35s ease;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .cta-btn:hover{background:var(--burgundy); color:var(--champagne); transform:translateY(-3px);}
+  .cta-btn.solid{background:var(--burgundy); color:var(--champagne);}
+  .cta-btn.solid:hover{background:var(--burgundy-2); color:var(--champagne);}
+
+  /* ---------- JUMP LINK ---------- */
+  .jump-link{
+    display:inline-block; margin-top:10px; font-family:'Jost',sans-serif; font-size:11.5px;
+    letter-spacing:0.05em; text-transform:uppercase; color:var(--rosegold); text-decoration:none;
+    border-bottom:1px solid var(--rosegold); padding-bottom:2px; transition:color .3s ease, border-color .3s ease;
+  }
+  .jump-link:hover{color:var(--burgundy); border-color:var(--burgundy);}
+
+  /* ---------- NEXT STEPS ---------- */
+  .next-steps{display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:18px;}
+  .next-step{background:var(--white); border:1px solid var(--line); border-top:3px solid var(--rosegold); padding:18px; break-inside:avoid;}
+  .next-step .ns-range{font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--rosegold); font-weight:600;}
+  .next-step p{font-size:14px; color:var(--ink); line-height:1.55; margin:8px 0 0;}
+
+  /* ---------- HERO IMAGE STRIP ---------- */
+  .hero-img{width:100%; height:190px; object-fit:cover; display:block; border:1px solid var(--line); margin-top:16px;}
+
+  /* ---------- SITE-IMAGE FIGURE ---------- */
+  .site-figure{margin:16px 0 0; break-inside:avoid;}
+  .site-figure img{width:100%; height:150px; object-fit:cover; display:block; border:1px solid var(--line);}
+  .site-figure figcaption{font-family:'Jost',sans-serif; font-size:9.5px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); text-align:center; margin-top:6px;}
+
+  /* =========================================================
+     SCANDINAVIAN MINIMAL — used only by the Inquiry Form and
+     the Securing Your Event page. Deliberately quieter than
+     the rest of the book: charcoal, thin lines, generous air.
+     ========================================================= */
+  :root{
+    --charcoal:#2B2B2B;
+    --charcoal-soft:#5C5C5C;
+    --line-min:#E4E1DC;
+  }
+  .minimal-block{font-family:'Jost',sans-serif;}
+  .minimal-block h3.mb-title{
+    font-family:'Cormorant Garamond',serif; font-weight:500; font-style:italic;
+    font-size:22px; color:var(--charcoal); margin-bottom:10px; letter-spacing:0.01em;
+  }
+  .minimal-block .mb-copy{
+    font-family:'Jost',sans-serif; font-size:14.5px; line-height:1.85; color:var(--charcoal-soft);
+    max-width:680px; font-weight:300;
+  }
+
+  /* ---------- INQUIRY FORM ---------- */
+  .inquiry-form{margin-top:26px;}
+  .inquiry-form .if-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px 28px;}
+  .inquiry-form .if-field{display:flex; flex-direction:column;}
+  .inquiry-form .if-field.full{grid-column:1 / -1;}
+  .inquiry-form label{
+    font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--charcoal-soft); margin-bottom:8px;
+  }
+  .inquiry-form input[type="text"],
+  .inquiry-form input[type="email"],
+  .inquiry-form input[type="tel"],
+  .inquiry-form input[type="date"],
+  .inquiry-form input[type="number"],
+  .inquiry-form select,
+  .inquiry-form textarea{
+    font-family:'Cormorant Garamond',serif; font-size:16px; color:var(--charcoal);
+    border:none; border-bottom:1px solid var(--charcoal-soft); background:transparent;
+    padding:8px 2px; width:100%; border-radius:0; -webkit-appearance:none; appearance:none;
+    transition:border-color .3s ease;
+  }
+  .inquiry-form select{
+    background-image:linear-gradient(45deg, transparent 50%, var(--charcoal-soft) 50%), linear-gradient(135deg, var(--charcoal-soft) 50%, transparent 50%);
+    background-position:calc(100% - 6px) center, calc(100% - 1px) center; background-size:6px 6px; background-repeat:no-repeat;
+  }
+  .inquiry-form input:focus, .inquiry-form select:focus, .inquiry-form textarea:focus{
+    outline:none; border-bottom:1.5px solid var(--charcoal);
+  }
+  .inquiry-form textarea{resize:vertical; min-height:70px; line-height:1.5;}
+  .inquiry-form .if-check-group{
+    grid-column:1 / -1; border-top:1px solid var(--line-min); border-bottom:1px solid var(--line-min);
+    padding:16px 0; margin-top:4px;
+  }
+  .inquiry-form .if-check-group > label{margin-bottom:12px; display:block;}
+  .if-checks{display:flex; flex-wrap:wrap; gap:12px 26px;}
+  .if-check{display:flex; align-items:center; gap:9px; font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--charcoal);}
+  .if-check input[type="checkbox"]{
+    width:16px; height:16px; accent-color:var(--charcoal); margin:0; cursor:pointer;
+  }
+  .if-submit-row{margin-top:26px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;}
+  .if-submit{
+    font-family:'Jost',sans-serif; font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+    background:var(--charcoal); color:#fff; border:none; padding:15px 36px; cursor:pointer;
+    transition:background .3s ease, transform .3s ease;
+  }
+  .if-submit:hover{background:#000; transform:translateY(-2px);}
+  .if-note{font-family:'Jost',sans-serif; font-size:11.5px; color:var(--charcoal-soft); font-weight:300;}
+
+  /* ---------- SECURING YOUR EVENT — 2x2 STEP GRID ---------- */
+  .secure-grid{display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:30px; background:var(--line-min);}
+  .secure-step{background:var(--cream); padding:34px 30px; break-inside:avoid;}
+  .secure-step .ss-num{
+    font-family:'Cinzel',serif; font-weight:500; font-size:44px; color:var(--rosegold);
+    opacity:0.55; line-height:1; margin-bottom:14px;
+  }
+  .secure-step .ss-label{
+    font-family:'Jost',sans-serif; font-size:10px; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--charcoal-soft); margin-bottom:6px;
+  }
+  .secure-step h4{
+    font-family:'Cormorant Garamond',serif; font-weight:600; font-size:22px; color:var(--charcoal);
+    margin-bottom:12px; letter-spacing:0.01em;
+  }
+  .secure-step p{font-family:'Jost',sans-serif; font-size:13.5px; line-height:1.8; color:var(--charcoal-soft); font-weight:300;}
+
+  @media (max-width:900px){
+    .link-grid{grid-template-columns:repeat(2,1fr);}
+    .next-steps{grid-template-columns:1fr;}
+    .inquiry-form .if-grid{grid-template-columns:1fr;}
+    .secure-grid{grid-template-columns:1fr;}
+  }
+  @media print{
+    .link-card:hover{transform:none; box-shadow:none;}
+    details.faq-item{page-break-inside:avoid; break-inside:avoid;}
+    details.faq-item summary::after{transform:none !important;}
+    .fit-row, .next-step, .link-card{page-break-inside:avoid; break-inside:avoid;}
+    .secure-step, .inquiry-form .if-check-group{page-break-inside:avoid; break-inside:avoid;}
+  }
+
+  @media (max-width:900px){
+    .link-grid{grid-template-columns:1fr 1fr;}
+  }
+
   @media print{
     /* Force every background color/gradient to print, in every browser */
     *{-webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; color-adjust:exact !important;}
@@ -269,16 +534,21 @@
 
     /* Never let a card, table, or banner split across two printed sheets */
     .offer-box, .tier-chip, .step, .perk-banner, .contact-banner, .chart-card,
-    table, .ref-table tr, .callout, .service-menu, .toc-row{
+    table, .ref-table tr, .callout, .service-menu, .toc-row,
+    .link-card, .next-step, details.faq-item, .fit-row, .cta-btn{
       page-break-inside:avoid; break-inside:avoid;
     }
+    details.faq-item{ }
+    details.faq-item:not([open]) .faq-body{display:block !important;}
+    details.faq-item summary .faq-icon{display:none !important;}
 
     /* Guarantee scroll-triggered animations always print in their finished state */
     .reveal{opacity:1 !important; transform:none !important;}
     .chart-card svg rect{transform:scaleY(1) !important;}
     .chart-card svg text{opacity:1 !important;}
     .offer-box:hover, .tier-chip:hover, .pill:hover, .perk-banner:hover,
-    .contact-banner:hover, .ref-table tbody tr:hover, .step:hover{
+    .contact-banner:hover, .ref-table tbody tr:hover, .step:hover,
+    .link-card:hover, .cta-btn:hover, .toc-row:hover{
       transform:none !important; box-shadow:none !important;
     }
 
@@ -306,149 +576,169 @@
     <div class="eyebrow">Fusion Spa &amp; Resort</div>
     <h1>Event &amp; Celebration<br>Packages</h1>
     <div class="moto">Luxury Redefined</div>
-    <p class="sub">Where wellness meets a refined escape — an invitation to gather, celebrate, and return to yourselves, together.</p>
-    <div class="footer-line">250 Byberry Rd · Philadelphia, PA 19116 · fusionsparesort.com</div>
+    <p class="sub">Gather. Unwind. Celebrate. Private group experiences combining spa access, dining, wellness services, and optional private cabana access.</p>
+    <div class="footer-line">250 Byberry Rd · Philadelphia, PA 19116 · fusionsparesort.com · (215) 681-4444</div>
   </div>
 
-  <!-- ============ PAGE 2 — CONTENTS + WELCOME/RATES ============ -->
-  <div class="page">
+  <!-- ============ PAGE 2 — HOW THE PACKAGES WORK ============ -->
+  <div class="page" id="page-02">
     <div class="watermark"></div>
     <div class="page-header"><img class="mono-logo" src="data:image/png;base64,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" alt="FS"><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Contents</h2>
-    <div class="rule" style="margin-left:0;"></div>
-    <div class="toc-links">
-      <a class="toc-row" href="#page-03"><span>Package Tiers — Overview</span><span class="price">03</span></a>
-      <a class="toc-row" href="#page-04"><span>Tier I &amp; II — Essential Access / Relax &amp; Refuel</span><span class="price">04</span></a>
-      <a class="toc-row" href="#page-05"><span>Tier III &amp; IV — Full Fusion / Complete Renewal</span><span class="price">05</span></a>
-      <a class="toc-row" href="#page-06"><span>Tier V — The Ultimate Fusion (Flagship)</span><span class="price">06</span></a>
-      <a class="toc-row" href="#page-07"><span>Group Discount Schedule</span><span class="price">07</span></a>
-      <a class="toc-row" href="#page-08"><span>Large Groups · Corporate · Private Rental</span><span class="price">08</span></a>
-      <a class="toc-row" href="#page-09"><span>À La Carte Menu &amp; Booking Guide</span><span class="price">09</span></a>
-    </div>
+    <h2 class="page-title">Four Ways To Experience Fusion</h2>
+    <p class="page-intro">Every event starts with a tier. Each one builds on the last — more dining credit, more service, more of what makes a stay feel complete.</p>
 
-    <h3 class="box-h" style="margin-bottom:6px;">Standard Rates &amp; Bundled Service Formula</h3>
-    <table class="ref-table">
-      <thead><tr><th>Access Type</th><th>Rate</th><th>Notes</th></tr></thead>
+    <table class="ref-table" style="margin-top:18px;">
+      <thead><tr><th>Tier</th><th>What's Included</th></tr></thead>
       <tbody>
-        <tr><td>Weekday (Mon–Fri)</td><td class="price">$86.40</td><td>Up to 5 hrs · +$15/add'l hr</td></tr>
-        <tr><td>Weekend (Sat–Sun, incl. holidays)</td><td class="price">$102.60</td><td>Up to 5 hrs · +$15/add'l hr</td></tr>
-        <tr><td>Early Bird (M–F, 10:00–11:30 AM arrival)</td><td class="price">$70.20</td><td>Must arrive before 12:00 PM</td></tr>
-        <tr><td>Moonlight Access (M–F, from 7:30 PM)</td><td class="price">$59.40</td><td>Women only</td></tr>
+        <tr><td><b>I · Standard Access</b></td><td>Standard day-pass admission, based on your selected date and arrival time</td></tr>
+        <tr><td><b>II · Access + Dining</b></td><td>Standard admission + $50 dining credit per guest</td></tr>
+        <tr><td><b>III · Full Fusion</b></td><td>Admission + $75 dining credit + choice of one included spa service</td></tr>
+        <tr><td><b>IV · Ultimate Fusion</b></td><td>All-Day Access + $100 dining credit + choice of one service + two enhancements included</td></tr>
       </tbody>
     </table>
-    <div class="callout"><b>À La Carte Service Formula:</b> Massage/Facial Price + $50 (a reduced, bundled admission) = Service Package Price — for guests booking outside of a tier package. <em>Example — Glow &amp; Go Facial ($165) + $50 = $215 total.</em></div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">02</span><span>Contents</span></div>
+
+    <div class="perk-banner">
+      <div class="pb-icon">✦</div>
+      <div class="pb-text"><b>The More Guests You Bring, The More You Save</b><span>Group rates are built into every eligible package, with the strongest savings reserved for larger qualifying groups. All prices are per guest and subject to applicable taxes.</span></div>
+    </div>
+
+    <div class="callout"><b>Group Size:</b> Tier I &amp; II are available for groups of <b>4–20 guests</b>. Tier III &amp; IV are available for groups of <b>4–8 guests</b>.</div>
+
+    <h3 class="box-h" style="margin-top:24px;">Find Your Fit</h3>
+    <div class="fit-guide">
+      <div class="fit-row"><span class="fg-size">1–3 Guests</span><span class="fg-rec">Book directly online — <b>à la carte</b> spa access, treatments, and dining, no group minimum required</span></div>
+      <div class="fit-row"><span class="fg-size">4–8 Guests</span><span class="fg-rec">Any tier fits — choose <b>Tier I, II, III, or IV</b> depending on how much you want included</span></div>
+      <div class="fit-row"><span class="fg-size">9–20 Guests</span><span class="fg-rec"><b>Tier I or Tier II</b>, with group savings already built in</span></div>
+      <div class="fit-row"><span class="fg-size">21+ Guests</span><span class="fg-rec"><b>Large Group, Corporate &amp; Private Rental</b> — custom-quoted by our events team</span></div>
+    </div>
+
+    <h3 class="box-h" style="margin-top:24px;">Explore Fusion Spa &amp; Resort</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://fusionsparesort.com/spa-treatments/" target="_blank" rel="noopener">
+        <img class="lc-img" src="https://fusionsparesort.com/images/2026/01/fusion-spa-resort-relaxing-massage-therapy-experience-800x800.webp" alt="Spa treatments at Fusion Spa & Resort">
+        <div class="lc-label">Spa Treatments<span class="lc-sub">Full menu</span></div>
+      </a>
+      <a class="link-card" href="https://fusionsparesort.com/dining/" target="_blank" rel="noopener">
+        <img class="lc-img" src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-friends-dining-together.webp" alt="Dining at Fusion Spa & Resort">
+        <div class="lc-label">Dining<span class="lc-sub">Restaurant menu</span></div>
+      </a>
+      <a class="link-card" href="https://fusionspa.try.be/" target="_blank" rel="noopener">
+        <img class="lc-img" src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-champagne-dessert-toast.webp" alt="Book your visit at Fusion Spa & Resort">
+        <div class="lc-label">Book Now<span class="lc-sub">Reserve online</span></div>
+      </a>
+      <a class="link-card" href="https://fusionsparesort.com/faq/" target="_blank" rel="noopener">
+        <img class="lc-img" src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-lunch-and-refreshments.webp" alt="Frequently asked questions">
+        <div class="lc-label">FAQ<span class="lc-sub">Good to know</span></div>
+      </a>
+      <a class="link-card" href="https://fusionsparesort.com/private-events/" target="_blank" rel="noopener">
+        <img class="lc-img" src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-dessert-table-party-experience.webp" alt="Private events at Fusion Spa & Resort">
+        <div class="lc-label">Private Events<span class="lc-sub">Group inquiries</span></div>
+      </a>
+    </div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">02</span><span>How It Works</span></div>
   </div>
 
-  <!-- ============ PAGE 3 — TIER OVERVIEW ============ -->
+  <!-- ============ PAGE 3 — TIER I ============ -->
   <div class="page" id="page-03">
     <div class="watermark"></div>
-    <div class="page-header"><div class="eyebrow">The Heart Of The Book</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Five Tiers, One Simple Idea</h2>
-    <p class="page-intro">Each tier is crafted as a natural elevation — richer choice, deeper indulgence, and a more complete experience the higher you rise. Suited to solo guests, pairs, and groups up to eight.</p>
+    <div class="page-header"><div class="eyebrow">Package Tiers</div><div class="eyebrow">Luxury Redefined</div></div>
+    <h2 class="page-title">Tier I · Standard Access</h2>
+    <p class="page-intro">Your day at Fusion — the applicable standard admission rate based on the date and arrival time you select. No dining credit, no spa service, no markup: just the honest access rate.</p>
 
-    <div class="ladder" style="margin-top:26px;">
-      <div class="tier-chip reveal" data-t="1"><div class="b">I</div><div class="n">Essential Access</div><div class="p">$86.40</div></div>
-      <div class="tier-chip reveal" data-t="2"><div class="b">II</div><div class="n">Relax &amp; Refuel</div><div class="p">$96</div></div>
-      <div class="tier-chip reveal" data-t="3"><div class="b">III</div><div class="n">Full Fusion</div><div class="p">$280</div></div>
-      <div class="tier-chip reveal" data-t="4"><div class="b">IV</div><div class="n">Complete Renewal</div><div class="p">$320</div></div>
-      <div class="tier-chip reveal" data-t="5"><div class="b">V</div><div class="n">Ultimate Fusion</div><div class="p">$460</div></div>
+    <div class="offer-box">
+      <div class="ob-head"><div><div class="ob-eyebrow">Access Rates</div><div class="ob-title">Standard Day Pass</div></div></div>
+      <div class="ob-body">
+        <table class="ref-table">
+          <thead><tr><th>Rate</th><th>Price</th><th>Window</th></tr></thead>
+          <tbody>
+            <tr><td>Weekday · Mon–Fri</td><td class="price">$86.40</td><td>Up to 5 hrs · +$15/add'l hr</td></tr>
+            <tr><td>Weekend · Sat–Sun + Holidays</td><td class="price">$102.60</td><td>Up to 5 hrs · +$15/add'l hr</td></tr>
+            <tr><td>Early Bird · Mon–Fri</td><td class="price">$70.20</td><td>Arrival 10:00–11:30 AM, before 12 PM</td></tr>
+            <tr><td>Moonlight · Mon–Fri</td><td class="price">$59.40</td><td>From 7:30 PM · Women only</td></tr>
+          </tbody>
+        </table>
+        <ul class="includes" style="margin-top:16px;">
+          <li class="li-amenity">Facility admission</li>
+          <li class="li-amenity">Pool access</li>
+          <li class="li-amenity">Sauna &amp; resort amenities</li>
+          <li class="li-amenity">Selected access window</li>
+        </ul>
+        <div class="ob-value">No dining credit · No spa service included · Group size: 4–20 guests</div>
+      </div>
     </div>
 
-    <div class="chart-card">
-      <h4>Value Ladder — Per-Guest Price by Tier</h4>
-      <svg viewBox="0 0 700 160" width="100%">
-        <line x1="50" y1="130" x2="660" y2="130" stroke="#E3CFC2" stroke-width="1"/>
-        <g font-family="Jost, sans-serif">
-          <rect x="80" y="121" width="80" height="9" fill="#E9CFC7"/>
-          <text x="120" y="114" text-anchor="middle" font-size="11" fill="#4A2B30">$86</text>
-          <text x="120" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER I</text>
-          <rect x="200" y="119" width="80" height="11" fill="#DDB3AA"/>
-          <text x="240" y="112" text-anchor="middle" font-size="11" fill="#4A2B30">$96</text>
-          <text x="240" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER II</text>
-          <rect x="320" y="79" width="80" height="51" fill="#CE968C"/>
-          <text x="360" y="72" text-anchor="middle" font-size="11" fill="#4A2B30">$280</text>
-          <text x="360" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER III</text>
-          <rect x="440" y="71" width="80" height="59" fill="#BC7B72"/>
-          <text x="480" y="64" text-anchor="middle" font-size="11" fill="#4A2B30">$320</text>
-          <text x="480" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER IV</text>
-          <rect x="560" y="30" width="80" height="100" fill="#5C2733"/>
-          <text x="600" y="23" text-anchor="middle" font-size="11" fill="#4A2B30" font-weight="600">$460</text>
-          <text x="600" y="146" text-anchor="middle" font-size="9" fill="#7A5B58">TIER V</text>
-        </g>
-      </svg>
-    </div>
-
-    <table class="ref-table" style="margin-top:16px;">
-      <thead><tr><th></th><th>I</th><th>II</th><th>III</th><th>IV</th><th>V</th></tr></thead>
+    <h3 class="box-h" style="margin-top:22px;">Group Savings</h3>
+    <table class="ref-table">
+      <thead><tr><th>Guests</th><th>Savings</th><th>Weekday Example</th></tr></thead>
       <tbody>
-        <tr><td>Guest Min.</td><td>8</td><td>8</td><td>6</td><td>6</td><td>4 (max 8)</td></tr>
-        <tr><td>Dining</td><td>—</td><td>$10 Credit</td><td>$25 Credit</td><td>$50 Credit</td><td>$90 Credit</td></tr>
-        <tr><td>Service Choices</td><td>—</td><td>—</td><td>4 options</td><td>10 options</td><td>13 options</td></tr>
-        <tr><td>Enhancements</td><td>—</td><td>—</td><td>—</td><td>1 included</td><td>2 included</td></tr>
+        <tr><td>4–6 guests</td><td>Standard rate</td><td class="price">$86.40</td></tr>
+        <tr><td>7–10 guests</td><td class="price">5% off</td><td class="price">$82.08</td></tr>
+        <tr><td>11–15 guests</td><td class="price">10% off</td><td class="price">$77.76</td></tr>
+        <tr><td>16–20 guests</td><td class="price">15% off</td><td class="price">$73.44</td></tr>
       </tbody>
     </table>
-
-    <div class="perk-banner reveal">
-      <div class="pb-icon">✦</div>
-      <div class="pb-text"><b>A Privilege at Every Tier: Private Cabana Pricing</b><span>Add a Private Cabana to any tier for just $100 per group — a savings of $89 off the regular $189 rate.</span></div>
-    </div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">03</span><span>Package Tiers</span></div>
+    <p class="upgrade-note">Tier I is the actual applicable day-pass rate for your date and time — not a discounted flat package. You're purchasing real admission, priced honestly.</p>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">03</span><span>Tier I</span></div>
   </div>
 
-  <!-- ============ PAGE 4 — TIER I & II (BOXED) ============ -->
+  <!-- ============ PAGE 4 — TIER II ============ -->
   <div class="page" id="page-04">
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow">Package Tiers</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Tier I &amp; Tier II</h2>
+    <h2 class="page-title">Tier II · Access + Dining</h2>
+    <p class="page-intro">Relax &amp; Refuel — the same applicable admission rate as Tier I, plus a $50 dining credit per guest to use anywhere on our menu.</p>
 
-    <div class="offer-box reveal">
-      <div class="ob-head">
-        <div><div class="ob-eyebrow">Tier I</div><div class="ob-title">Essential Access</div></div>
-        <div class="ob-price"><div class="big">$86.40</div><div class="sub">per guest</div></div>
-      </div>
+    <div class="offer-box">
+      <div class="ob-head"><div><div class="ob-eyebrow">Tier II</div><div class="ob-title">Standard Admission + $50 Dining Credit</div></div></div>
       <div class="ob-body">
-        <ul class="includes single"><li class="li-amenity">Standard facility admission</li></ul>
-        <div class="ob-value">Weekend rate $102.60 · Guest minimum: 8</div>
-        <p class="upgrade-note">Best for guests who simply want the facility — pool, sauna, amenities — with no dining credit or service attached.</p>
+        <table class="ref-table">
+          <thead><tr><th>Rate</th><th>Admission</th><th>+ Dining Credit</th><th>Total / Guest</th></tr></thead>
+          <tbody>
+            <tr><td>Weekday</td><td>$86.40</td><td>$50</td><td class="price">$136.40</td></tr>
+            <tr><td>Weekend</td><td>$102.60</td><td>$50</td><td class="price">$152.60</td></tr>
+            <tr><td>Early Bird</td><td>$70.20</td><td>$50</td><td class="price">$120.20</td></tr>
+            <tr><td>Moonlight</td><td>$59.40</td><td>$50</td><td class="price">$109.40</td></tr>
+          </tbody>
+        </table>
+        <div class="ob-value">All totals shown before tax · Dining credit applies to any menu item · Group size: 4–20 guests</div>
       </div>
     </div>
 
-    <div class="offer-box reveal">
-      <div class="ob-head">
-        <div><div class="ob-eyebrow">Tier II</div><div class="ob-title">Relax &amp; Refuel</div></div>
-        <div class="ob-price"><div class="big">$96</div><div class="sub">per guest</div></div>
-      </div>
-      <div class="ob-body">
-        <ul class="includes">
-          <li class="li-amenity">Standard admission</li>
-          <li class="li-dining">$10 Food Credit per guest</li>
-        </ul>
-        <div class="ob-value"><span class="strike">$112.60 separately</span> — <span class="save">Save $16.60 · ~15% off</span></div>
-        <p class="upgrade-note">Guest minimum: 8. A simple, flat-rate day pass with a food credit built in — no weekend surcharge, no line-item math.</p>
-      </div>
+    <h3 class="box-h" style="margin-top:22px;">Group Savings</h3>
+    <table class="ref-table">
+      <thead><tr><th>Guests</th><th>Savings</th><th>Weekday Example</th></tr></thead>
+      <tbody>
+        <tr><td>4–6 guests</td><td>Standard rate</td><td class="price">$136.40</td></tr>
+        <tr><td>7–10 guests</td><td class="price">5% off</td><td class="price">$129.58</td></tr>
+        <tr><td>11–15 guests</td><td class="price">10% off</td><td class="price">$122.76</td></tr>
+        <tr><td>16–20 guests</td><td class="price">15% off</td><td class="price">$115.94</td></tr>
+      </tbody>
+    </table>
+    <div class="bonus-strip">
+      <b>Bring the group. Keep more of the value.</b>
+      Larger groups receive progressively better package pricing — savings apply to the full Tier II total before taxes.
     </div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">04</span><span>Package Tiers</span></div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">04</span><span>Tier II</span></div>
   </div>
 
-  <!-- ============ PAGE 5 — TIER III & IV (BOXED) ============ -->
+  <!-- ============ PAGE 5 — TIER III ============ -->
   <div class="page" id="page-05">
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow">Package Tiers</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Tier III &amp; Tier IV</h2>
+    <h2 class="page-title">Tier III · Full Fusion</h2>
 
-    <div class="offer-box reveal">
+    <div class="offer-box">
       <div class="ob-head">
         <div><div class="ob-eyebrow">Tier III</div><div class="ob-title">Full Fusion</div></div>
-        <div class="ob-price"><div class="big">$280</div><div class="sub">per guest</div></div>
+        <div class="ob-price"><div class="big">$290</div><div class="sub">+ taxes / guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
           <li class="li-amenity">Bundled admission</li>
-          <li class="li-dining">$25 Dining Credit per guest</li>
+          <li class="li-dining">$75 dining credit per guest</li>
         </ul>
         <div class="service-menu">
-          <span class="sm-label">Choice of One Service</span>
+          <span class="sm-label">Choice of One Signature Service</span>
           <div class="pill-row">
             <span class="pill" data-tip="A refined express facial delivering the essentials of a complete skincare treatment in a convenient timeframe.">Glow &amp; Go Facial</span>
             <span class="pill" data-tip="Minimum-to-low pressure to gently reset, release light tension, and restore balance.">Relaxation Massage</span>
@@ -457,64 +747,42 @@
           </div>
           <div class="tip-display">Hover a service above to see the details.</div>
         </div>
-        <div class="ob-value" style="margin-top:14px;"><span class="strike">$317.60 separately</span> — <span class="save">Save $37.60 · ~12% off</span></div>
-        <p class="upgrade-note">Guest minimum: 6. Our most balanced offering — a genuine spa treatment paired with real dining credit, at a meaningful discount.</p>
+        <div class="ob-value" style="margin-top:14px;"><span class="strike">$315.00 separately</span> — <span class="save">Save $25 per guest · ~8% package savings</span></div>
+        <p class="upgrade-note">This discount is intentionally conservative — the package already carries real bundled value: genuine spa treatment, meaningful dining credit, and admission in one price. Group size: 4–8 guests.</p>
       </div>
     </div>
 
-    <div class="offer-box reveal">
-      <div class="ob-head">
-        <div><div class="ob-eyebrow">Tier IV</div><div class="ob-title">Complete Renewal</div></div>
-        <div class="ob-price"><div class="big">$320</div><div class="sub">per guest</div></div>
-      </div>
-      <div class="ob-body">
-        <ul class="includes">
-          <li class="li-amenity">Bundled admission</li>
-          <li class="li-dining">$50 Dining Credit per guest</li>
-          <li class="li-service">1 Service Add-On / Enhancement included</li>
-        </ul>
-        <div class="service-menu">
-          <span class="sm-label">A Refined Selection — Choose From 10 Services at Tier IV</span>
-          <div class="pill-row">
-            <span class="pill" data-tip="A refined express facial delivering the essentials of a complete skincare treatment in a convenient timeframe.">Glow &amp; Go Facial</span>
-            <span class="pill" data-tip="Minimum-to-low pressure to gently reset, release light tension, and restore balance.">Relaxation Massage</span>
-            <span class="pill" data-tip="A tactile ritual where soap is whipped into a warm, cloud-like foam and swept across the skin.">Artisan Soap Ritual</span>
-            <span class="pill" data-tip="A refining exfoliation enriched with milk for deep hydration and glow.">Cleopatra Milk Escape</span>
-            <span class="pill new" data-tip="Targeted pressure to melt away deep-seated tension.">Deep Pressure Release</span>
-            <span class="pill new" data-tip="A brown sugar scrub massage that exfoliates, improves circulation, and leaves skin smooth and hydrated.">Silken Sugar Veil</span>
-            <span class="pill new" data-tip="A purifying charcoal scrub that buffs away dead skin while drawing out impurities.">Black Pearl Detox Polish</span>
-            <span class="pill new" data-tip="An invigorating coffee and honey exfoliation that detoxifies for a balanced, velvet-soft finish.">Café Radiance</span>
-            <span class="pill new" data-tip="A mineral-rich Dead Sea salt polish that detoxifies, smooths, and restores natural softness.">Ocean Mineral Polish Scrub</span>
-            <span class="pill new" data-tip="An advanced hydration and exfoliation ritual for a smooth, luminous, pore-refined “glass skin” finish.">Glass Skin Ritual</span>
-          </div>
-          <div class="tip-display">Hover a service above to see the details.</div>
-        </div>
-        <div class="ob-value" style="margin-top:14px;"><span class="strike">$402.60 separately</span> — <span class="save">Save $82.60 · ~21% off</span></div>
-        <p class="upgrade-note">Guest minimum: 6. Everything Tier III offers, taken further — a richer collection of services and a complimentary enhancement — our most-loved indulgence.</p>
-      </div>
-    </div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">05</span><span>Package Tiers</span></div>
+    <h3 class="box-h" style="margin-top:20px;">Group Package Savings</h3>
+    <table class="ref-table">
+      <thead><tr><th>Guests</th><th>Savings</th><th>Price / Guest</th></tr></thead>
+      <tbody>
+        <tr><td>4–5 guests</td><td class="price">5% off</td><td class="price">$275.50</td></tr>
+        <tr><td>6–8 guests</td><td class="price">10% off</td><td class="price">$261.00</td></tr>
+      </tbody>
+    </table>
+    <div class="bonus-strip"><b>Our most balanced group experience</b> — genuine spa treatment, meaningful dining credit, and bundled admission in one package.</div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">05</span><span>Tier III</span></div>
   </div>
 
-  <!-- ============ PAGE 6 — TIER V (FLAGSHIP, BOXED) ============ -->
+  <!-- ============ PAGE 6 — TIER IV FLAGSHIP ============ -->
   <div class="page" id="page-06" style="background:linear-gradient(180deg, var(--cream) 78%, var(--parchment) 100%);">
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow" style="color:var(--burgundy);">Flagship Package</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Tier V — The Ultimate Fusion</h2>
+    <h2 class="page-title">Tier IV · The Ultimate Fusion</h2>
 
-    <div class="offer-box premium reveal" style="margin-top:16px;">
+    <div class="offer-box premium" style="margin-top:16px;">
       <div class="ob-head">
-        <div><div class="ob-eyebrow">Tier V · Flagship</div><div class="ob-title">The Ultimate Fusion</div></div>
-        <div class="ob-price"><div class="big">$460</div><div class="sub">per guest</div></div>
+        <div><div class="ob-eyebrow">Tier IV · Flagship</div><div class="ob-title">The Ultimate Fusion</div></div>
+        <div class="ob-price"><div class="big">$480</div><div class="sub">+ taxes / guest</div></div>
       </div>
       <div class="ob-body">
         <ul class="includes">
-          <li class="li-amenity">Bundled admission, upgraded to All-Day Access</li>
-          <li class="li-dining">$90 Dining Credit per guest</li>
-          <li class="li-service">2 Service Add-Ons / Enhancements included</li>
+          <li class="li-amenity">All-Day Access</li>
+          <li class="li-dining">$100 dining credit per guest</li>
+          <li class="li-service">2 enhancements included</li>
         </ul>
         <div class="service-menu">
-          <span class="sm-label">Our Complete Collection — Choose From 13 Services at Tier V</span>
+          <span class="sm-label">Choice of One Service — Our Complete Collection, 13 Options</span>
           <div class="pill-row">
             <span class="pill" data-tip="A refined express facial delivering the essentials of a complete skincare treatment in a convenient timeframe.">Glow &amp; Go Facial</span>
             <span class="pill" data-tip="Minimum-to-low pressure to gently reset, release light tension, and restore balance.">Relaxation Massage</span>
@@ -525,162 +793,270 @@
             <span class="pill" data-tip="A purifying charcoal scrub that buffs away dead skin while drawing out impurities.">Black Pearl Detox Polish</span>
             <span class="pill" data-tip="An invigorating coffee and honey exfoliation that detoxifies for a balanced, velvet-soft finish.">Café Radiance</span>
             <span class="pill" data-tip="A mineral-rich Dead Sea salt polish that detoxifies, smooths, and restores natural softness.">Ocean Mineral Polish Scrub</span>
-            <span class="pill" data-tip="An advanced hydration and exfoliation ritual for a smooth, luminous, pore-refined “glass skin” finish.">Glass Skin Ritual</span>
-            <span class="pill new" data-tip="Our elevated luxury facial, combining traditional essentials with advanced Glass Skin Ritual elements.">Fusion &amp; Beyond Facial</span>
-            <span class="pill new" data-tip="Restores mobility and relieves chronic muscle tension.">Therapeutic Restoration</span>
-            <span class="pill new" data-tip="A gentle, supportive massage tailored to the needs of expecting mothers.">Prenatal Massage</span>
+            <span class="pill" data-tip="An advanced hydration and exfoliation ritual for a smooth, luminous, pore-refined &#8220;glass skin&#8221; finish.">Glass Skin Ritual</span>
+            <span class="pill" data-tip="Our elevated luxury facial, combining traditional essentials with advanced Glass Skin Ritual elements.">Fusion &amp; Beyond Facial</span>
+            <span class="pill" data-tip="Restores mobility and relieves chronic muscle tension.">Therapeutic Restoration</span>
+            <span class="pill" data-tip="A gentle, supportive massage tailored to the needs of expecting mothers.">Prenatal Massage</span>
           </div>
           <div class="tip-display">Hover a service above to see the details.</div>
         </div>
-        <div class="ob-value" style="margin-top:14px;"><span class="strike">$607.60 separately</span> — <span class="save">Save $147.60 · ~24% off</span></div>
-        <p class="upgrade-note">Guest count: 4–8 (private group size). Our complete experience — every service on the menu is on the table, plus two enhancements and a full day to enjoy it.</p>
-        <div class="perk-banner reveal" style="margin-top:18px;">
-          <div class="pb-icon">✦</div>
-          <div class="pb-text"><b>Add the Private Cabana</b><span>Just $100 for your group — the perfect finishing touch for the Ultimate Fusion.</span></div>
+        <div class="ob-value" style="margin-top:14px;"><span class="strike">$607.60 separately</span> — <span class="save">Save $127.60 per guest · ~21% package savings</span></div>
+        <a class="jump-link" href="#add-ons">View available enhancements →</a>
+        <p class="upgrade-note" style="margin-top:12px;">Group size: 4–8 guests. Our complete Fusion experience — every service on the menu is available, with all-day access, substantial dining credit, and two enhancements included.</p>
+      </div>
+    </div>
+
+    <h3 class="box-h" style="margin-top:20px;">Group Savings</h3>
+    <table class="ref-table">
+      <thead><tr><th>Guests</th><th>Additional Savings</th><th>Price / Guest</th></tr></thead>
+      <tbody>
+        <tr><td>4–5 guests</td><td class="price">5% off</td><td class="price">$456.00</td></tr>
+        <tr><td>6–8 guests</td><td class="price">10% off</td><td class="price">$432.00</td></tr>
+      </tbody>
+    </table>
+    <p class="upgrade-note">This keeps a compelling package discount without stacking an excessive additional group discount on top of an already heavily bundled flagship package.</p>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">06</span><span>Tier IV · Flagship</span></div>
+  </div>
+
+  <!-- ============ PAGE 7 — GROUP SAVINGS + PRIVATE CABANA ============ -->
+  <div class="page" id="page-07">
+    <div class="watermark"></div>
+    <div class="page-header"><div class="eyebrow">A Major Reason To Bring Everyone</div><div class="eyebrow">Luxury Redefined</div></div>
+    <h2 class="page-title">Bring The Group. Save More.</h2>
+
+    <div class="two-col" style="margin-top:14px;">
+      <div class="offer-box" style="margin-top:0;">
+        <div class="ob-head"><div><div class="ob-eyebrow">Tiers I &amp; II</div><div class="ob-title">Group Savings</div></div></div>
+        <div class="ob-body">
+          <ul class="includes single">
+            <li class="li-amenity">4–6 guests — standard package pricing</li>
+            <li class="li-dining">7–10 guests — <b>5% off</b></li>
+            <li class="li-dining">11–15 guests — <b>10% off</b></li>
+            <li class="li-dining">16–20 guests — <b>15% off</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="offer-box" style="margin-top:0;">
+        <div class="ob-head"><div><div class="ob-eyebrow">Tiers III &amp; IV</div><div class="ob-title">Group Savings</div></div></div>
+        <div class="ob-body">
+          <ul class="includes single">
+            <li class="li-amenity">4–5 guests — <b>5% off</b></li>
+            <li class="li-dining">6–8 guests — <b>10% off</b></li>
+          </ul>
+          <p class="upgrade-note">Group savings apply to the applicable package price before taxes. No stacking with other promotional discounts.</p>
         </div>
       </div>
     </div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">06</span><span>Flagship Package</span></div>
-  </div>
 
-  <!-- ============ PAGE 7 — GROUP DISCOUNTS ============ -->
-  <div class="page" id="page-07">
-    <div class="watermark"></div>
-    <div class="page-header"><div class="eyebrow">One Rule, Every Package</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">Group Size Discount Schedule</h2>
-    <p class="page-intro">A single, transparent schedule applies across every tier and every package in this book — beyond each tier's own guest minimum.</p>
-
-    <table class="ref-table" style="margin-top:14px;">
-      <thead><tr><th>Guest Count</th><th>Discount</th><th>Applies To</th></tr></thead>
-      <tbody>
-        <tr><td>1–6 guests</td><td class="price">No discount</td><td>Full tier / à la carte pricing</td></tr>
-        <tr><td>7–10 guests</td><td class="price">5% off</td><td>All tiers &amp; Large Group rates</td></tr>
-        <tr><td>11–15 guests</td><td class="price">10% off</td><td>Large Group rates</td></tr>
-        <tr><td>16–20 guests</td><td class="price">15% off</td><td>Large Group rates</td></tr>
-        <tr><td>21+ guests</td><td class="price">Custom quote</td><td>Contact our Events Team</td></tr>
-      </tbody>
-    </table>
-
-    <div class="chart-card">
-      <h4>Discount Growth By Headcount</h4>
-      <svg viewBox="0 0 700 150" width="100%">
-        <line x1="40" y1="120" x2="660" y2="120" stroke="#E3CFC2" stroke-width="1"/>
-        <g font-family="Jost, sans-serif" font-size="10" fill="#4A2B30">
-          <rect x="60" y="113" width="95" height="7" fill="#EEDCCB"/>
-          <text x="107" y="105" text-anchor="middle">0%</text>
-          <text x="107" y="136" text-anchor="middle" fill="#7A5B58">1–6</text>
-          <rect x="185" y="94" width="95" height="26" fill="#DDB3AA"/>
-          <text x="232" y="86" text-anchor="middle">5%</text>
-          <text x="232" y="136" text-anchor="middle" fill="#7A5B58">7–10</text>
-          <rect x="310" y="70" width="95" height="50" fill="#CE968C"/>
-          <text x="357" y="62" text-anchor="middle">10%</text>
-          <text x="357" y="136" text-anchor="middle" fill="#7A5B58">11–15</text>
-          <rect x="435" y="46" width="95" height="74" fill="#BC7B72"/>
-          <text x="482" y="38" text-anchor="middle">15%</text>
-          <text x="482" y="136" text-anchor="middle" fill="#7A5B58">16–20</text>
-          <rect x="560" y="36" width="65" height="84" fill="none" stroke="#5C2733" stroke-width="1.5" stroke-dasharray="4,3"/>
-          <text x="592" y="28" text-anchor="middle" font-weight="600">✦</text>
-          <text x="592" y="136" text-anchor="middle" fill="#7A5B58">21+</text>
-        </g>
-      </svg>
+    <div class="offer-box premium" style="margin-top:20px;">
+      <div class="ob-head">
+        <div><div class="ob-eyebrow">Available With Any Tier</div><div class="ob-title">Private Cabana</div></div>
+        <div class="ob-price"><div class="big">$100</div><div class="sub">per cabana</div></div>
+      </div>
+      <div class="ob-body">
+        <ul class="includes">
+          <li class="li-amenity">Reserved for your entire stay</li>
+          <li class="li-amenity">Comfortably accommodates 4–6 guests</li>
+          <li class="li-service">Can be added to any eligible tier</li>
+          <li class="li-dining">One $100 rate applies per reserved cabana</li>
+        </ul>
+        <div class="ob-value"><span class="strike">$189 standalone rate</span> — <span class="save">Save $89 · Group event rate</span></div>
+        <p class="upgrade-note">The $100 rate is a special event/package rate — not a per-person charge. For groups larger than six, multiple cabanas can be reserved where availability permits.</p>
+      </div>
     </div>
-    <div class="callout">This schedule applies on top of each tier's already-fair package price, never stacks with another promotion, and holds the line so pricing stays honest and predictable at every size.</div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">07</span><span>Group Discounts</span></div>
+    <figure class="site-figure">
+      <img src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-dessert-table-party-experience.webp" alt="Celebration table with desserts and champagne at Fusion Spa & Resort">
+      <figcaption>The finishing touch for any cabana celebration</figcaption>
+    </figure>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">07</span><span>Group Savings &amp; Cabana</span></div>
   </div>
 
-  <!-- ============ PAGE 8 — LARGE GROUPS / CORPORATE / BUYOUT (BOXED, COMBINED) ============ -->
+  <!-- ============ PAGE 8 — BEYOND THE TIERS ============ -->
   <div class="page" id="page-08">
     <div class="watermark"></div>
     <div class="page-header"><div class="eyebrow">Beyond The Core Tiers</div><div class="eyebrow">Luxury Redefined</div></div>
     <h2 class="page-title">Large Groups · Corporate · Private Rental</h2>
-    <p class="page-intro">The bigger the occasion, the more personal our planning becomes. Every event beyond our core tiers is shaped in conversation with our events team — the details below are your starting point, not a fixed menu.</p>
 
-    <div class="step-row">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <h4>Inquire</h4>
-        <p>Share your guest count, preferred date, and the occasion — celebration, offsite, or private takeover.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <h4>Customize</h4>
-        <p>Our events team builds a tailored rate around dining, service blocks, and facility access to match.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <h4>Celebrate</h4>
-        <p>We hold your date, coordinate every detail on-site, and make sure the day runs exactly as planned.</p>
-      </div>
+    <div class="minimal-block">
+      <h3 class="mb-title">Design Your Custom Experience</h3>
+      <p class="mb-copy">The packages below are a starting point, not a fixed menu. For gatherings of 15 or more, corporate offsites, and facility takeovers, we invite you to curate a bespoke itinerary. Explore our core tiers and select your preferred enhancements—from private cabanas to dedicated treatment blocks. Submit your preferences using the form below, and our events team will craft a comprehensive, tailored proposal.</p>
     </div>
 
-    <div class="offer-box reveal">
-      <div class="ob-head"><div><div class="ob-eyebrow">15+ Guests</div><div class="ob-title">Large Group Packages</div></div></div>
+    <div class="offer-box" style="margin-top:22px;">
+      <div class="ob-head"><div><div class="ob-eyebrow">21+ Guests</div><div class="ob-title">Large Group Packages</div></div></div>
       <div class="ob-body">
-        <table class="ref-table">
-          <thead><tr><th>Guests</th><th>Admission</th><th>+ $10 Food Credit</th></tr></thead>
-          <tbody>
-            <tr><td>15–20</td><td class="price">$73.44</td><td class="price">$81.60</td></tr>
-            <tr><td>21+</td><td class="price">Custom Quote</td><td class="price">Custom Quote</td></tr>
-          </tbody>
-        </table>
-        <p class="upgrade-note">Most large events are individually quoted based on date, season, and the specific experience you're planning — the rate above is a starting reference only. Groups of 9–14 guests fall between our tier packages and Large Group pricing; our events team will tailor a custom rate. An optional Spa Enhancement Block is also available, subject to daily capacity and off-peak scheduling.</p>
+        <p class="upgrade-note" style="margin-top:0;">Groups of 21 or more are individually quoted based on date, season, and the specific experience you're planning. Our <b>Exclusive Venue Rental</b> comfortably hosts <b>50–180 guests</b> for a full private takeover.</p>
       </div>
     </div>
 
     <div class="two-col" style="margin-top:14px;">
-      <div class="offer-box reveal" style="margin-top:0;">
+      <div class="offer-box" style="margin-top:0;">
         <div class="ob-head"><div><div class="ob-eyebrow">Offsites &amp; Team Days</div><div class="ob-title">Corporate Events</div></div></div>
         <div class="ob-body">
           <ul class="includes single">
-            <li class="li-amenity">Large Group or Tier I–V rates (by size)</li>
-            <li class="li-service">Optional Spa Enhancement Block</li>
-            <li class="li-amenity">Off-peak: weekdays, 10–11 AM, after 4–5 PM</li>
+            <li class="li-amenity">Tier I–II for groups of 4–20, Tier III–IV for groups of 4–8</li>
+            <li class="li-service">Exclusive Therapist &amp; Room Takeover — a private treatment room and personal therapist for a continuous block of time</li>
+            <li class="li-amenity">Off-peak: weekdays, after 4–5 PM</li>
             <li class="li-dining">Custom dining credit tiers on request</li>
+            <li class="li-service">Curated team wellness days designed around your company's schedule and goals</li>
+            <li class="li-dining">Access to dedicated spa treatment blocks and custom catering options</li>
           </ul>
-          <p class="upgrade-note">Lead time: 4–8 weeks. Ask our events team about team wellness days and client appreciation packages.</p>
+          <p class="upgrade-note">Lead time: 2–4 weeks. Ask our events team about team wellness days and client appreciation packages.</p>
         </div>
       </div>
-      <div class="offer-box reveal" style="margin-top:0;">
+      <div class="offer-box" style="margin-top:0;">
         <div class="ob-head"><div><div class="ob-eyebrow">Weddings &amp; Takeovers</div><div class="ob-title">Full Facility Rental</div></div></div>
         <div class="ob-body">
           <ul class="includes single">
-            <li class="li-amenity">Private, exclusive facility access</li>
+            <li class="li-amenity">Full-facility exclusivity, up to 180 guests</li>
             <li class="li-dining">Base rate: custom quote</li>
-            <li class="li-service">Add Tier II–V dining credit or wellness block</li>
-            <li class="li-amenity">Private cabana available at $100</li>
+            <li class="li-dining">Custom dining credit tiers on request</li>
+            <li class="li-service">Exclusive Therapist &amp; Room Takeover — a private treatment room and personal therapist for a continuous block of time</li>
+            <li class="li-amenity">Complete venue exclusivity for private celebrations, weddings, and large-scale corporate takeovers</li>
+            <li class="li-service">Fully customizable wellness itineraries, including comprehensive therapist takeovers and bespoke dining menus</li>
           </ul>
           <p class="upgrade-note">Lead time: 6–12 weeks. Our events team will walk your date, layout, and guest flow with you before anything is confirmed.</p>
         </div>
       </div>
     </div>
 
-    <div class="contact-banner reveal">
-      <div>
-        <div class="cb-title">Let's Plan Your Event Together</div>
-        <div class="cb-sub">No two events are the same — reach out and our events team will build a proposal around your date, guest count, and vision.</div>
+    <h3 class="box-h" style="margin-top:22px;">Ready To Book? Here's Your Next Step</h3>
+    <div class="next-steps" style="grid-template-columns:1fr 1fr;">
+      <div class="next-step">
+        <div class="ns-range">4–20 Guests</div>
+        <p>Found the perfect tier for your gathering? Contact us at <a href="tel:+12156814444">(215) 681-4444</a> or <a href="mailto:info@fusionsparesort.com">info@fusionsparesort.com</a> to reserve your date and secure your group discount.</p>
       </div>
-      <div class="cb-details">
-        <div>(215) 681-4444</div>
-        <div><b>events@fusionsparesort.com</b></div>
-        <div>fusionsparesort.com/events</div>
+      <div class="next-step">
+        <div class="ns-range">21+ Guests</div>
+        <p>Let's build something entirely yours. Email <a href="mailto:info@fusionsparesort.com">info@fusionsparesort.com</a> with your preferred date and guest count, along with any other info to curate your event.</p>
       </div>
     </div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">08</span><span>Groups &amp; Events</span></div>
+
+    <!-- ---------- CUSTOM EVENT INQUIRY FORM ---------- -->
+    <div class="minimal-block inquiry-form" id="inquiry-form">
+      <h3 class="mb-title">Request A Proposal</h3>
+      <p class="mb-copy">Prefer to start in writing? Fill out the form below and our events team will follow up with a tailored quote.</p>
+
+      <form action="mailto:info@fusionsparesort.com" method="GET" enctype="text/plain">
+        <div class="if-grid">
+          <div class="if-field">
+            <label for="host_name">Host / Company Name</label>
+            <input type="text" id="host_name" name="Host_Company_Name" required>
+          </div>
+          <div class="if-field">
+            <label for="email_addr">Email Address</label>
+            <input type="email" id="email_addr" name="Email_Address" required>
+          </div>
+          <div class="if-field">
+            <label for="phone_num">Phone Number</label>
+            <input type="tel" id="phone_num" name="Phone_Number">
+          </div>
+          <div class="if-field">
+            <label for="pref_date">Preferred Date(s)</label>
+            <input type="date" id="pref_date" name="Preferred_Dates">
+          </div>
+          <div class="if-field">
+            <label for="guest_count">Estimated Guest Count</label>
+            <input type="number" id="guest_count" name="Guest_Count" min="1">
+          </div>
+          <div class="if-field">
+            <label for="occasion">Occasion</label>
+            <select id="occasion" name="Occasion">
+              <option value="Corporate Offsite">Corporate Offsite</option>
+              <option value="Private Party">Private Party</option>
+              <option value="Wedding">Wedding</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="if-check-group">
+            <label>Pick &amp; Choose Enhancements</label>
+            <div class="if-checks">
+              <label class="if-check"><input type="checkbox" name="Enhancement_Core_Access_Tier" value="Yes"> Core Access Tier</label>
+              <label class="if-check"><input type="checkbox" name="Enhancement_Custom_Dining_Credit" value="Yes"> Custom Dining Credit</label>
+              <label class="if-check"><input type="checkbox" name="Enhancement_Dedicated_Spa_Block" value="Yes"> Dedicated Spa Block</label>
+              <label class="if-check"><input type="checkbox" name="Enhancement_Private_Cabanas" value="Yes"> Private Cabana(s)</label>
+              <label class="if-check"><input type="checkbox" name="Enhancement_Exclusive_Facility_Rental" value="Yes"> Exclusive Facility Rental</label>
+            </div>
+          </div>
+
+          <div class="if-field full">
+            <label for="vision">Tell Us About Your Vision</label>
+            <textarea id="vision" name="Vision_Details" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="if-submit-row">
+          <button type="submit" class="if-submit">Request Proposal</button>
+          <span class="if-note">Opens your email client with these details pre-filled — nothing is sent until you hit send there.</span>
+        </div>
+      </form>
+    </div>
+
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">08</span><span>Beyond The Tiers</span></div>
   </div>
 
-  <!-- ============ PAGE 9 — A LA CARTE + BOOKING GUIDE ============ -->
+  <!-- ============ PAGE 9 — SECURING YOUR EVENT ============ -->
   <div class="page" id="page-09">
     <div class="watermark"></div>
-    <div class="page-header"><div class="eyebrow">Mix &amp; Match, Plan Ahead</div><div class="eyebrow">Luxury Redefined</div></div>
-    <h2 class="page-title">À La Carte Menu &amp; Booking Guide</h2>
+    <div class="page-header"><div class="eyebrow">Your Path To Booking</div><div class="eyebrow">Luxury Redefined</div></div>
+    <h2 class="page-title">Securing Your Event</h2>
+    <div class="minimal-block">
+      <p class="mb-copy">Whether you're bringing two guests for an afternoon or coordinating a 150-person takeover, the path to booking looks the same — four simple steps, from first idea to confirmed date.</p>
+    </div>
+
+    <div class="secure-grid">
+      <div class="secure-step">
+        <div class="ss-num">01</div>
+        <div class="ss-label">The Vision</div>
+        <h4>Guest Count &amp; Dates</h4>
+        <p>Determine your estimated party size and preferred date. Knowing your headcount allows us to immediately guide you toward our core tiers or a bespoke large-group proposal.</p>
+      </div>
+      <div class="secure-step">
+        <div class="ss-num">02</div>
+        <div class="ss-label">The Experience</div>
+        <h4>Tiers &amp; Custom Takeovers</h4>
+        <p>For groups of 4 to 20, choose the core tier that best fits your desired level of dining and spa services. For gatherings of 21 or more, our events team will begin drafting a custom itinerary tailored exactly to your group's flow.</p>
+      </div>
+      <div class="secure-step">
+        <div class="ss-num">03</div>
+        <div class="ss-label">The Enhancements</div>
+        <h4>Personalize Your Day</h4>
+        <p>Elevate your gathering by adding exclusive elements. Reserve private cabanas for a dedicated home base, request custom dining credits, or secure a dedicated massage therapist block for seamless consecutive treatments.</p>
+      </div>
+      <div class="secure-step">
+        <div class="ss-num">04</div>
+        <div class="ss-label">The Confirmation</div>
+        <h4>Finalize &amp; Secure</h4>
+        <p>Submit your details via our inquiry form or contact our events team directly. We will apply all eligible group savings, calculate any taxes, and return a comprehensive, tailored quote to lock in your date.</p>
+      </div>
+    </div>
+
+    <div class="cta-row" style="margin-top:28px;">
+      <a class="cta-btn solid" href="#inquiry-form">Go To Inquiry Form ↑</a>
+      <a class="cta-btn" href="https://fusionspa.try.be/" target="_blank" rel="noopener">Book Directly Online →</a>
+    </div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">09</span><span>Securing Your Event</span></div>
+  </div>
+
+  <!-- ============ PAGE 10 — ADD-ONS & ENHANCEMENTS ============ -->
+  <div class="page" id="page-10">
+    <div class="watermark"></div>
+    <div class="page-header"><div class="eyebrow" id="add-ons">Make It Your Own</div><div class="eyebrow">Luxury Redefined</div></div>
+    <h2 class="page-title">Add-Ons &amp; Enhancements</h2>
+    <p class="page-intro">Everything on this page can be purchased in addition to your selected tier — mix and match freely.</p>
 
     <div class="two-col" style="margin-top:14px;">
       <div>
-        <h3 class="box-h">Massage &amp; Facial Menu</h3>
+        <h3 class="box-h">Massage &amp; Facial Services</h3>
         <table class="ref-table">
           <tbody>
-            <tr><td>Cleopatra Milk Escape</td><td class="price">from $180</td></tr>
-            <tr><td>The Artisan Soap Ritual</td><td class="price">from $180</td></tr>
+            <tr><td>Cleopatra Milk Escape</td><td class="price">$180</td></tr>
+            <tr><td>Artisan Soap Ritual</td><td class="price">$180</td></tr>
+            <tr><td>Black Pearl Detox Polish</td><td class="price">$210</td></tr>
+            <tr><td>Ocean Mineral Polish</td><td class="price">$210</td></tr>
+            <tr><td>Café Radiance</td><td class="price">$210</td></tr>
+            <tr><td>Silken Sugar Veil</td><td class="price">$210</td></tr>
             <tr><td>Soft Reset (Relaxation) Massage</td><td class="price">$190</td></tr>
             <tr><td>Deep Pressure Release</td><td class="price">$205</td></tr>
             <tr><td>Therapeutic Restoration</td><td class="price">$215</td></tr>
@@ -688,12 +1064,13 @@
             <tr><td>Glow &amp; Go Facial</td><td class="price">$165</td></tr>
             <tr><td>Glass Skin Ritual</td><td class="price">$175</td></tr>
             <tr><td>Men's Facial</td><td class="price">$185</td></tr>
-            <tr><td>Fusion &amp; Beyond</td><td class="price">$195</td></tr>
+            <tr><td>Fusion &amp; Beyond Facial</td><td class="price">$195</td></tr>
           </tbody>
         </table>
+        <p class="upgrade-note">Japanese Scalp Refresh (+$35) and Aloe Vera Enhancement (+$20) available with body scrub services only.</p>
       </div>
       <div>
-        <h3 class="box-h">Add-Ons, Cabana &amp; Dining</h3>
+        <h3 class="box-h">Dry Massage Enhancements</h3>
         <table class="ref-table">
           <tbody>
             <tr><td>Essential Oil Aromatherapy</td><td class="price">$20</td></tr>
@@ -702,42 +1079,101 @@
             <tr><td>Hot Stones</td><td class="price">$25</td></tr>
             <tr><td>Hot Towel Relaxation</td><td class="price">$30</td></tr>
             <tr><td>Cupping Therapy</td><td class="price">$40</td></tr>
-            <tr><td>Private Cabana — with any tier</td><td class="price">$100</td></tr>
-            <tr><td>Private Cabana — standalone</td><td class="price">$189</td></tr>
           </tbody>
         </table>
-        <p class="upgrade-note" style="margin-top:12px;">Full dining menu at fusionsparesort.com/dining · dining credits apply toward any menu item</p>
+        <div class="callout" style="margin-top:14px;">Massage enhancements are available only with eligible dry massage services.</div>
+        <figure class="site-figure">
+          <img src="https://fusionsparesort.com/images/2026/08/fusion-spa-resort-sushi-roll.webp" alt="Fresh sushi roll at Fusion Spa & Resort restaurant">
+          <figcaption>Dining credits apply toward the full menu</figcaption>
+        </figure>
       </div>
     </div>
-
-    <h3 class="box-h" style="margin-top:16px;">Availability &amp; Lead Times</h3>
-    <table class="ref-table">
-      <thead><tr><th>Service</th><th>Capacity</th><th>Hours</th><th>Structure</th></tr></thead>
-      <tbody>
-        <tr><td>Dry / Wet Massage · Facials</td><td>24/day each</td><td>10:30 AM – 9:30 PM</td><td>2 guests/hour</td></tr>
-      </tbody>
-    </table>
-    <table class="ref-table" style="margin-top:8px;">
-      <thead><tr><th>Event Type</th><th>Recommended Lead Time</th></tr></thead>
-      <tbody>
-        <tr><td>Tiers I–IV</td><td>Standard booking</td></tr>
-        <tr><td>Tier V (4–8 guests)</td><td>2–4 weeks</td></tr>
-        <tr><td>Large Groups (15+)</td><td>4–6 weeks</td></tr>
-        <tr><td>Corporate Events</td><td>4–8 weeks</td></tr>
-        <tr><td>Full Facility Buyout</td><td>6–12 weeks</td></tr>
-      </tbody>
-    </table>
-    <div class="callout"><b>Best availability &amp; pricing:</b> weekdays, 10:00–11:00 AM, and after 4:00–5:00 PM.</div>
-    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">09</span><span>À La Carte &amp; Booking</span></div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">10</span><span>Add-Ons &amp; Enhancements</span></div>
   </div>
 
-  <!-- ============ PAGE 10 — BACK COVER ============ -->
+  <!-- ============ PAGE 11 — FAQ ============ -->
+  <div class="page" id="page-11">
+    <div class="watermark"></div>
+    <div class="page-header"><div class="eyebrow">Plan With Confidence</div><div class="eyebrow">Luxury Redefined</div></div>
+    <h2 class="page-title">Frequently Asked Questions</h2>
+    <p class="page-intro">Everything else you need to know before your visit. For the full step-by-step process, see <a class="jump-link" style="margin-top:0;" href="#page-09">Securing Your Event</a>.</p>
+
+    <div class="callout" style="margin-top:16px;">
+      All prices are per guest unless otherwise stated · Taxes are additional · Group discounts do not stack with other promotions · Cabana availability is subject to capacity · Additional services are subject to daily capacity · Final pricing is confirmed at booking.
+    </div>
+
+    <h3 class="box-h" style="margin-top:20px;">Browse By Topic</h3>
+
+    <div class="faq-group">
+      <h4>Access &amp; Admission</h4>
+      <details class="faq-item">
+        <summary>Do I need a reservation?</summary>
+        <div class="faq-a">Reservations are strongly recommended, especially for weekends and holidays, to guarantee your spot. <a href="https://fusionspa.try.be/" target="_blank" rel="noopener">Reserve online</a> to guarantee availability.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is there an age requirement?</summary>
+        <div class="faq-a">Guests 16+ are welcome with a parent or legal guardian. Guests under 18 must be accompanied at all times. Valid government-issued ID and a credit/debit card are required at check-in.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What should I bring?</summary>
+        <div class="faq-a">Swimwear for pools and thermal areas. Robes, towels, and lockers are provided. Clean sandals or non-slip socks are recommended.</div>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h4>Cabanas &amp; Private Events</h4>
+      <details class="faq-item">
+        <summary>Do you offer private cabanas?</summary>
+        <div class="faq-a">Yes — private cabanas comfortably accommodate 4–6 guests and can be added to any eligible tier for a special event rate. See <a href="#page-07">Group Savings &amp; Private Cabana</a> for details.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can the spa be reserved for a private event?</summary>
+        <div class="faq-a">Yes — partial or full buyouts are available based on availability, hosting up to 50 guests. <a href="https://fusionsparesort.com/private-events/" target="_blank" rel="noopener">Inquire here</a> for details.</div>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h4>Treatments &amp; Dining</h4>
+      <details class="faq-item">
+        <summary>Are treatments included with a Spa Pass?</summary>
+        <div class="faq-a">Yes — every spa treatment includes a complimentary Spa Pass, granting full access to amenities before your service.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I dine without spa access?</summary>
+        <div class="faq-a">No — a Spa Pass is required to access dining. Dining credits from Tiers II–IV apply toward any menu item. <a href="https://fusionsparesort.com/dining/" target="_blank" rel="noopener">See our full menu</a>.</div>
+      </details>
+    </div>
+
+    <div class="faq-group">
+      <h4>Cancellations &amp; Policies</h4>
+      <details class="faq-item">
+        <summary>What is your cancellation policy?</summary>
+        <div class="faq-a">Cancel or reschedule at least 24 hours before your booking to avoid charges. Cancellations within 24 hours or no-shows are charged in full.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What should I wear?</summary>
+        <div class="faq-a">Robes are required in spa and restaurant areas. The spa is barefoot-friendly, but clean sandals or non-slip socks are recommended.</div>
+      </details>
+    </div>
+
+    <div class="cta-row" style="margin-top:20px;">
+      <a class="cta-btn" href="https://fusionsparesort.com/faq/" target="_blank" rel="noopener">View Full FAQ →</a>
+      <a class="cta-btn solid" href="https://fusionspa.try.be/" target="_blank" rel="noopener">Book Now →</a>
+    </div>
+    <div class="page-footer"><span>Fusion Spa &amp; Resort · Luxury Redefined</span><span class="mono">11</span><span>FAQ</span></div>
+  </div>
+
+  <!-- ============ PAGE 11 — BACK COVER ============ -->
   <div class="page back">
     <img src="data:image/png;base64,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" alt="Fusion Spa &amp; Resort logo">
     <h2>Experience The Fusion<br>Of Science &amp; Serenity</h2>
     <div class="moto">Luxury Redefined</div>
-    <p>250 Byberry Rd, Philadelphia, PA 19116 · (215) 681-4444 · service@fusionsparesort.com</p>
-    <p style="font-style:italic; opacity:0.85;">All services, prices, and availability are subject to change. This document is a working draft for internal planning purposes.</p>
+    <p>250 Byberry Rd, Philadelphia, PA 19116 · (215) 681-4444 · events@fusionsparesort.com</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="cta-btn" href="https://fusionspa.try.be/" target="_blank" rel="noopener" style="border-color:var(--champagne); color:var(--champagne);">Book Now</a>
+      <a class="cta-btn" href="https://fusionsparesort.com/private-events/" target="_blank" rel="noopener" style="border-color:var(--champagne); color:var(--champagne);">Plan an Event</a>
+    </div>
+    <p style="font-style:italic; opacity:0.85; margin-top:18px;">All services, prices, and availability are subject to change. This document is a working draft for internal planning purposes.</p>
   </div>
 
 </div>
